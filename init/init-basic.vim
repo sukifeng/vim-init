@@ -41,6 +41,15 @@ set ttimeoutlen=50
 " 显示光标位置
 set ruler
 
+"let $LANG='en'
+
+"auto read when file changes outside of vim
+set autoread
+
+"set mouse behavior
+behave mswin
+
+set cursorline
 
 "----------------------------------------------------------------------
 " 搜索设置
@@ -95,6 +104,12 @@ endif
 " 其他设置
 "----------------------------------------------------------------------
 
+" auto indent
+set ai
+
+" smart indent
+set si
+
 " 显示匹配的括号
 set showmatch
 
@@ -121,6 +136,9 @@ set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
 " 或者 Vim 当前目录包含 .tags 文件
 set tags=./.tags;,.tags
 
+" show tag with function prototype
+set showfulltag
+
 " 如遇Unicode值大于255的文本，不必等到空格再折行
 set formatoptions+=m
 
@@ -130,7 +148,18 @@ set formatoptions+=B
 " 文件换行符，默认使用 unix 换行符
 set ffs=unix,dos,mac
 
-
+" 设置字体
+if has('gui_running')
+    set guifont=Consolas\ for\ Powerline\ FixedD:h12
+    "set guifont=YaHei\ Consolas\ Hybrid:h11.5
+    set guifontwide=Microsoft\ Yahei\ Mono:h12
+	"
+	"disable menu&toolbar
+	set guioptions-=m
+	set guioptions-=T
+	"show the bottom scrollbar when the line exceed the window
+	set guioptions+=b
+endif
 "----------------------------------------------------------------------
 " 设置代码折叠
 "----------------------------------------------------------------------

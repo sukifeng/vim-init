@@ -330,4 +330,33 @@ else
 				\ '<root>' <cr>
 endif
 
+"my map
+"清除高亮
+nnoremap <leader>/ :nohlsearch<CR>
+"开关目录树
+nnoremap <F1> :NERDTreeToggle<CR>
+
+nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <C-LeftMouse> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+function! OpenFolder()
+    execute "silent !start explorer.exe /select, " . shellescape(expand('%'),1)
+endfunction
+nnoremap <C-f> :call OpenFolder()<CR>
+
+nnoremap <C-RightMouse> <C-O>
+
+
+" copy&paste
+vnoremap <C-C> "+y
+nnoremap <c-v> "+gp
+vnoremap <c-v> "+gp
+
+nnoremap <space>w :w<CR>
+nnoremap [[ [[zz
+nnoremap ]] ]]zz
+
+" 切换大小写
+nnoremap <leader>u m1gUiw`1
+inoremap <leader>u <esc>gUiwgi
 

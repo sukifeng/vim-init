@@ -125,8 +125,10 @@ if index(g:bundle_group, 'basic') >= 0
     nnoremap <unique> <leader>w :StripWhitespace<CR>
     let g:better_whitespace_enabled=0
 
-    "Plug 'WolfgangMehner/c-support', { 'on': [] }
+    Plug 'WolfgangMehner/c-support', { 'for': ['c', 'cpp'] }
+
     Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
+
     let g:formatdef_allman = '"astyle --style=allman --pad-oper"'
     let g:formatters_cpp = ['allman']
     let g:formatters_c = ['allman']

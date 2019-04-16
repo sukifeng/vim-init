@@ -16,7 +16,7 @@
 if !exists('g:bundle_group')
     let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes']
     let g:bundle_group += ['tags', 'airline', 'nerdtree',  'echodoc']
-    let g:bundle_group += ['leaderf', 'ale']
+    let g:bundle_group += ['leaderf']
 endif
 
 
@@ -369,7 +369,7 @@ endif
 "----------------------------------------------------------------------
 if index(g:bundle_group, 'nerdtree') >= 0
     Plug 'scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeFocus', 'NERDTreeToggle', 'NERDTreeCWD', 'NERDTreeFind'] }
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeDirArrows = 1
     let g:NERDTreeHijackNetrw = 0
@@ -424,8 +424,8 @@ if index(g:bundle_group, 'ale') >= 0
 
     " 编辑不同文件类型需要的语法检查器
     let g:ale_linters = {
-                \ 'c': ['clang', 'cppcheck'], 
-                \ 'cpp': ['clang', 'cppcheck'], 
+                \ 'c': ['clang'], 
+                \ 'cpp': ['clang'], 
                 \ 'python': ['flake8', 'pylint'], 
                 \ 'lua': ['luac'], 
                 \ 'go': ['go build', 'gofmt'],
@@ -596,7 +596,7 @@ Plug 'SirVer/ultisnips', { 'for': ['c', 'cpp'] }
 let g:ycm_add_preview_to_completeopt = 0
 
 " 禁用诊断功能：我们用前面更好用的 ALE 代替
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_show_diagnostics_ui = 1
 let g:ycm_server_log_level = 'info'
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_collect_identifiers_from_comments_and_strings = 1

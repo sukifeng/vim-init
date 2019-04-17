@@ -23,7 +23,7 @@ set number
 set signcolumn=yes
 
 " 总是显示标签栏
-set showtabline=2
+set showtabline=1
 
 " 设置显示制表符等隐藏字符
 set nolist
@@ -48,13 +48,25 @@ set splitright
 
 " 设置黑色背景
 set background=dark
+color solarized
 
 " 允许 256 色
 set t_Co=256
 
-" 设置颜色主题，会在所有 runtimepaths 的 colors 目录寻找同名配置
-color solarized
+let g:ColorToggleFlag = 1
+function! ColorToggle()
+    if g:ColorToggleFlag
+        set background=light
+        color xcode
+        let g:ColorToggleFlag = 0
+    else
+        set background=dark
+        color solarized
+        let g:ColorToggleFlag = 1
+    endif
+endfunc
 
+nnoremap <silent><F6> :call ColorToggle()<CR>
 
 "----------------------------------------------------------------------
 " 状态栏设置

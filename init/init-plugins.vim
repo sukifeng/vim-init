@@ -128,7 +128,9 @@ if index(g:bundle_group, 'basic') >= 0
     nnoremap <unique> <leader>w :StripWhitespace<CR>
     let g:better_whitespace_enabled=0
 
-    "Plug 'WolfgangMehner/c-support', { 'for': ['c', 'cpp'] }
+    Plug 'WolfgangMehner/c-support', { 'for': ['c', 'cpp'] }
+    
+    let g:C_MapLeader = ' '
 
     Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 

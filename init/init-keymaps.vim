@@ -19,10 +19,10 @@
 "----------------------------------------------------------------------
 " INSERT 模式下使用 EMACS 键位
 "----------------------------------------------------------------------
-inoremap <c-a> <home>
-inoremap <c-e> <end>
-inoremap <c-d> <del>
-inoremap <c-_> <c-k>
+"inoremap <c-a> <home>
+"inoremap <c-e> <end>
+"inoremap <c-d> <del>
+"inoremap <c-_> <c-k>
 
 
 "----------------------------------------------------------------------
@@ -227,7 +227,7 @@ endif
 " 编译运行 C/C++ 项目
 " 详细见：http://www.skywind.me/blog/archives/2084
 "----------------------------------------------------------------------
-
+let g:asyncrun_rootmarks = ['.svn', '.git', '.root','Project'] 
 " 自动打开 quickfix window ，高度为 6
 let g:asyncrun_open = 6
 
@@ -316,7 +316,7 @@ endfunc
 "----------------------------------------------------------------------
 if executable('rg')
 	noremap <silent><F2> :AsyncRun! -cwd=<root> rg -n --no-heading 
-				\ --color never -g *.h -g *.c* -g *.py -g *.js -g *.vim 
+				\ --color never -g *.h -g *.c* -g *.py -g *.s -g *.vim 
 				\ <C-R><C-W> "<root>" <cr>
 elseif has('win32') || has('win64')
 	noremap <silent><F2> :AsyncRun! -cwd=<root> findstr /n /s /C:"<C-R><C-W>" 

@@ -360,5 +360,9 @@ nnoremap ]] ]]zz
 nnoremap <leader>u m1gUiw`1
 inoremap <leader>u <esc>gUiwgi
 
+" 格式化
 nnoremap <leader>a :Autoformat<CR>
+
+"doxygen
+nnoremap <F5> :Dox<CR>
 

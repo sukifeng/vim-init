@@ -30,10 +30,10 @@
 " 使用 SecureCRT/XShell 等终端软件需设置：Backspace sends delete
 " 详见：http://www.skywind.me/blog/archives/2021
 "----------------------------------------------------------------------
-noremap <C-h> <left>
-noremap <C-j> <down>
-noremap <C-k> <up>
-noremap <C-l> <right>
+"noremap <C-h> <left>
+"noremap <C-j> <down>
+"noremap <C-k> <up>
+"noremap <C-l> <right>
 inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
@@ -381,3 +381,5 @@ nnoremap <leader>a :Autoformat<CR>
 "doxygen
 nnoremap <F5> :Dox<CR>
 
+"open vim config file
+nnoremap <leader>ev :!start gvim $VIM\vim-init\*.vim $VIM\vim-init\init\*.vim<CR>

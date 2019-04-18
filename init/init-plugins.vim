@@ -130,7 +130,7 @@ if index(g:bundle_group, 'basic') >= 0
 
     Plug 'WolfgangMehner/c-support', { 'for': ['c', 'cpp'] }
     
-    let g:C_MapLeader = ' '
+    let g:C_MapLeader = ','
 
     Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 
@@ -196,9 +196,16 @@ if index(g:bundle_group, 'enhanced') >= 0
     "map <m-=> <Plug>(expand_region_expand)
     "map <m--> <Plug>(expand_region_shrink)
 
+    " 注释
     Plug 'scrooloose/nerdcommenter'
     "关闭默认按键映射
     "let g:NERDCreateDefaultMappings = 0
+
+    " 模板
+    Plug 'honza/vim-snippets'
+    
+    Plug 'jiangmiao/auto-pairs'
+
 endif
 
 

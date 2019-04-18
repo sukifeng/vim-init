@@ -306,7 +306,22 @@ function! ExecuteFile()
 	endif
 endfunc
 
+function Switchfile()
+    let CurFileExt = fnamemodify(expand('%'),':e')
+    if CurFileExt == 'c'
+        let NextFileExt = 'h'
+    elseif CurFileExt == 'h'
+        let NextFileExt = 'c'
+    else
+        return
+    endif
+    let NextFileName = fnamemodify(expand('%'),':p:r') . '.' . NextFileExt
+    if filereadable(NextFileName)
+        exec 'e '. NextFileName
+    endif
+endfunc
 
+nnoremap <space>a :call Switchfile()<CR>
 
 "----------------------------------------------------------------------
 " F2 在项目目录下 Grep 光标下单词，默认 C/C++/Py/Js ，扩展名自己扩充

@@ -305,7 +305,7 @@ function! ExecuteFile()
 		exec 'AsyncRun -cwd=$(VIM_FILEDIR) -raw -save=2 -mode=0 '. cmd
 	endif
 endfunc
-
+" C文件和H文件互相切换
 function Switchfile()
     let CurFileExt = fnamemodify(expand('%'),':e')
     if CurFileExt == 'c'

@@ -206,6 +206,8 @@ if index(g:bundle_group, 'enhanced') >= 0
     
     Plug 'jiangmiao/auto-pairs'
 
+    Plug 'exvim/ex-easyhl'
+
 endif
 
 
@@ -598,7 +600,7 @@ endif
 "----------------------------------------------------------------------
 " YouCompleteMe 默认设置：YCM 需要你另外手动编译安装
 "----------------------------------------------------------------------
-Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'] }
+Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips', { 'for': ['c', 'cpp'] }
 
 " 禁用预览功能：扰乱视听

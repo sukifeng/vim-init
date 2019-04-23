@@ -172,7 +172,7 @@ endif
 if index(g:bundle_group, 'enhanced') >= 0
 
     " 用 v 选中一个区域后，ALT_+/- 按分隔符扩大/缩小选区
-    Plug 'terryma/vim-expand-region'
+    "Plug 'terryma/vim-expand-region
 
     " 快速文件搜索
     "Plug 'junegunn/fzf'
@@ -181,7 +181,7 @@ if index(g:bundle_group, 'enhanced') >= 0
     "Plug 'asins/vim-dict'
 
     " 使用 :FlyGrep 命令进行实时 grep
-    Plug 'wsdjeg/FlyGrep.vim', { 'for': ['c', 'cpp'] }
+    "Plug 'wsdjeg/FlyGrep.vim', { 'for': ['c', 'cpp'] }
 
     " 使用 :CtrlSF 命令进行模仿 sublime 的 grep
     "Plug 'dyng/ctrlsf.vim'
@@ -261,7 +261,7 @@ if index(g:bundle_group, 'tags') >= 0
     " 禁止 gutentags 自动链接 gtags 数据库
     let g:gutentags_auto_add_gtags_cscope = 0
 
-    let $GTAGSCONF = $VIM . '\gtags\share\gtags\gtags.conf'
+    let $GTAGSCONF = $VIM . '\tools\gtags\share\gtags\gtags.conf'
 
     let g:gutentags_plus_nomap = 1
     noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>
@@ -435,8 +435,8 @@ if index(g:bundle_group, 'ale') >= 0
 
     " 编辑不同文件类型需要的语法检查器
     let g:ale_linters = {
-                \ 'c': ['clang'], 
-                \ 'cpp': ['clang'], 
+                \ 'c': ['cppcheck'], 
+                \ 'cpp': ['cppcheck'], 
                 \ 'python': ['flake8', 'pylint'], 
                 \ 'lua': ['luac'], 
                 \ 'go': ['go build', 'gofmt'],
@@ -462,6 +462,7 @@ if index(g:bundle_group, 'ale') >= 0
     let g:ale_python_pylint_options .= ' --disable=W'
     let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
     let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+    let g:ale_c_cppcheck_executable = 'C:\Program Files\Cppcheck\cppcheck.exe'
     let g:ale_c_cppcheck_options = ''
     let g:ale_cpp_cppcheck_options = ''
 

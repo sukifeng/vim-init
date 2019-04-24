@@ -189,6 +189,9 @@ if index(g:bundle_group, 'enhanced') >= 0
     " 配对括号和引号自动补全
     Plug 'Raimondi/delimitMate'
 
+    Plug 'majutsushi/tagbar'
+    nnoremap <F4> :TagbarToggle<CR>
+
     " 提供 gist 接口
     "Plug 'lambdalisue/vim-gista', { 'on': 'Gista' }
     
@@ -607,7 +610,6 @@ Plug 'SirVer/ultisnips', { 'for': ['c', 'cpp'] }
 " 禁用预览功能：扰乱视听
 let g:ycm_add_preview_to_completeopt = 0
 
-" 禁用诊断功能：我们用前面更好用的 ALE 代替
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_server_log_level = 'info'
 let g:ycm_min_num_identifier_candidate_chars = 2

@@ -71,7 +71,7 @@ nnoremap <silent><F6> :call ColorToggle()<CR>
 "----------------------------------------------------------------------
 " 状态栏设置
 "----------------------------------------------------------------------
-set statusline=                                 " 清空状态了
+set statusline=                                 " 清空状态栏
 set statusline+=\ %F                            " 文件名
 set statusline+=\ [%1*%M%*%n%R%H]               " buffer 编号和状态
 set statusline+=%=                              " 向右对齐

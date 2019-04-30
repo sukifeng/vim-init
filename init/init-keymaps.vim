@@ -227,7 +227,7 @@ endif
 " 编译运行 C/C++ 项目
 " 详细见：http://www.skywind.me/blog/archives/2084
 "----------------------------------------------------------------------
-let g:asyncrun_rootmarks = ['.svn', '.git', '.root','Project'] 
+let g:asyncrun_rootmarks = ['.svn', '.git', '.root', 'Project'] 
 " 自动打开 quickfix window ，高度为 6
 let g:asyncrun_open = 6
 
@@ -383,3 +383,6 @@ nnoremap <F5> :Dox<CR>
 
 "open vim config file
 nnoremap <leader>ev :!start gvim $VIM\vim-init\*.vim $VIM\vim-init\init\*.vim<CR>
+
+"delete current buffer
+nnoremap <leader>d :bd %<CR>
